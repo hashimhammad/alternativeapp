@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps That Weaken Oppression</title>
+    <meta name="description"
+          content="Explore alternatives to popular applications that prioritize user privacy and ethical practices.">
+    <meta name="keywords"
+          content="alternatives, privacy, ethical, open-source, YouTube, Facebook, WhatsApp, Google, ChatGPT, Windows, Chrome">
+    <link rel="canonical" href="https://yourdomain.com/progressive-alternatives">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #6750A4;
+            --primary-container: #E8DEF8;
+            --on-primary: #FFFFFF;
+            --on-primary-container: #21005D;
+            --surface: #FFFFFF;
+            --surface-container: #F7F2FA;
+            --on-surface: #1C1B1F;
+            --on-surface-variant: #49454F;
+            --outline: #79747E;
+            --shadow: rgba(0, 0, 0, 0.14);
+            --radius: 12px;
+            --padding: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--surface-container);
+            color: var(--on-surface);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 16px;
+            line-height: 1.5;
+        }
+
+        #app-container {
+            max-width: 960px;
+            width: 100%;
+            background: var(--surface);
+            border-radius: var(--radius);
+            box-shadow: 0 1px 2px var(--shadow), 0 2px 6px var(--shadow);
+            padding: 24px;
+            transition: var(--transition);
+        }
+
+        header {
+            text-align: center;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--outline);
+        }
+
+        header h1 {
+            font-size: 2.25rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        main {
+            padding: 24px 0;
+        }
+
+        .app-section {
+            background: var(--surface-container);
+            border-radius: var(--radius);
+            padding: var(--padding);
+            margin-bottom: 24px;
+            transition: var(--transition);
+            box-shadow: 0 1px 2px var(--shadow);
+        }
+
+        .app-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px var(--shadow);
+        }
+
+        .app-title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 50px;
+            margin-top: 20px;
+        }
+
+        .app-icon {
+            width: 45px;
+            height: 45px;
+        }
+
+        .app-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .sub-section {
+            margin-bottom: 16px;
+        }
+
+        .sub-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--on-primary-container);
+            margin-bottom: 6px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+
+        .app-description {
+            font-size: 1rem;
+            color: var(--on-surface-variant);
+            margin-bottom: 16px;
+            line-height: 1.6;
+            padding-left: 14px;
+            padding-right: 14px;
+            padding-bottom: 14px;
+        }
+
+        .note {
+            font-size: 0.9375rem;
+            color: red;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        .alternatives-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--on-primary-container);
+            margin: 16px 0 12px;
+        }
+
+        .alternatives-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .alternatives-list li {
+            background: var(--primary-container);
+            color: var(--on-primary-container);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: default;
+        }
+
+        .alternatives-list li:hover {
+            background: #D0BCFF;
+            transform: translateY(-1px);
+        }
+
+        .spacer {
+            height: 1px;
+        }
+
+        .download-link {
+            display: inline-flex;
+            align-items: center;
+            background: var(--primary);
+            color: var(--on-primary);
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin: 8px 8px 0 0;
+            transition: var(--transition);
+            box-shadow: 0 1px 2px var(--shadow);
+        }
+
+        .download-link:hover {
+            background: #5B3D96;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+
+        .download-link:active {
+            background: #4A2D7B;
+            transform: translateY(0);
+        }
+
+        .newpipe-alternative {
+            color: #FF6F00;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px 0;
+            border-top: 1px solid var(--outline);
+            color: var(--on-surface-variant);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #app-container {
+                padding: 16px;
+            }
+
+            header h1 {
+                font-size: 1.75rem;
+            }
+
+            .app-title {
+                font-size: 1.25rem;
+            }
+
+            .sub-title {
+                font-size: 1.125rem;
+            }
+
+            .app-icon {
+                width: 28px;
+                height: 28px;
+            }
+
+            .app-description {
+                font-size: 0.9375rem;
+            }
+
+            .alternatives-list {
+                gap: 8px;
+            }
+
+            .download-link {
+                padding: 8px 16px;
+                font-size: 0.8125rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 8px;
+            }
+
+            .app-section {
+                padding: 12px;
+            }
+
+            .alternatives-list {
+                flex-direction: column;
+            }
+
+            .alternatives-list li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .download-link {
+                width: 100%;
+                justify-content: center;
+                margin: 8px 0;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .app-section {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .points {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="app-container">
+    <header>
+        <h1>Boycott with Action, Not Just Words</h1>
+    </header>
+
+    <main>
+        <section class="app-section">
+            <div class="app-title-container">
+                <img src="icons/youtube.png" alt="YouTube Icon" class="app-icon">
+                <h2 class="app-title">YouTube Alternative</h2>
+            </div>
+            <div class="sub-section">
+                <h3 class="sub-title">YouTube ReVanced:</h3>
+                <p class="app-description">
+                    YouTube ReVanced is a special app that lets you watch YouTube videos without any ads. Why does this
+                    matter?
+                    Ads on YouTube generate money for Google, which is linked to companies that support oppression and
+                    harmful agendas. By using ReVanced, you stop contributing to these profits and reduce funding for
+                    systems that harm innocent people.
+
+                    <br>
+                    <br>
+
+                    <a href="https://revancedyoutube.app/" target="_blank" rel="noopener noreferrer"
+                       class="download-link">
+                        <span class="material-icons" style="font-size: 18px; margin-right: 8px;">open_in_new</span>
+                        Download
+                    </a>
+
+
+                    <a href="https://www.youtube.com/watch?v=5iFK9o-6Pw4&pp=ygUjaW5zdGFsbCB5b3V0dWJlIHJldmFuY2VkIGluIGFuZHJvaWQ%3D"
+                       target="_blank"
+                       rel="noopener noreferrer" class="download-link">
+                        <span class="material-icons" style="font-size: 18px; margin-right: 8px;">play_circle</span>
+                        Tutorial
+                    </a>
+                </p>
+            </div>
+
+            <br>
+
+            <div class="sub-section">
+                <h3 class="sub-title">NewPipe</h3>
+                <p class="app-description">
+                    NewPipe is a <strong>light</strong> and <strong>easy-to-use</strong> app that lets you watch YouTube
+                    videos <strong>without any ads</strong>. By using NewPipe, you’re helping <strong>boycott</strong>
+                    and <strong>cut down the money</strong> that funds injustice. <strong>No ads, no trackers</strong> —
+                    just watch videos while resisting oppression.
+                    <br>
+                    <br>
+                    <a href="https://newpipe.net/" target="_blank" rel="noopener noreferrer" class="download-link">
+                        <span class="material-icons" style="font-size: 18px; margin-right: 8px;">open_in_new</span>
+                        NewPipe Website
+                    </a>
+                </p>
+                <p class="note">If ReVanced doesn’t work on your device, try NewPipe instead.</p>
+            </div>
+
+            <h3 class="alternatives-title">Features That Fight Back:</h3>
+            <ul class="alternatives-list">
+                <li>No Ads – No revenue for Google’s harmful partners.</li>
+                <li>Privacy First – Stops data harvesting</li>
+                <li>Cut the money, weaken the oppression.</li>
+            </ul>
+
+
+        </section>
+
+        <section class="app-section">
+            <div class="app-title-container">
+                <img src="icons/facebook.png" alt="Facebook Icon" class="app-icon">
+                <h2 class="app-title">Facebook Alternative</h2>
+            </div>
+            <p class="app-description">
+
+            <div class="sub-section">
+                <div class="sub-title">
+                    Hikmah by Kahf:
+                </div>
+                <p class="app-description">
+                    <strong>Hikmah</strong> is a powerful alternative to <strong>Facebook</strong>,
+                    <strong>Instagram</strong>, and <strong>Twitter</strong>, helping users resist harmful agendas like
+                    those from <strong>Zionist-controlled networks</strong>. Connect, share, and grow in a space free
+                    from exploitation, distractions, and harmful content. A platform built on <strong>privacy</strong>,
+                    <strong>respect</strong>, and <strong>purpose</strong>.
+                </p>
+            </div>
+
+            <p style="margin-left: 15px; margin-right: 15px">
+                <a href="https://play.google.com/store/apps/details?id=net.hikmah.app&hl=en" target="_blank"
+                   rel="noopener noreferrer" class="download-link">
+                    <span class="material-icons" style="font-size: 18px; margin-right: 8px;">android</span>
+                    Download for Android
+                </a>
+                <a href="https://apps.apple.com/gr/app/hikmah/id6741836269" target="_blank" rel="noopener noreferrer"
+                   class="download-link">
+                    <span class="material-icons" style="font-size: 18px; margin-right: 8px;">apple</span>
+                    Download for iOS
+                </a>
+            </p>
+
+            <h3 class="alternatives-title">Considerations</h3>
+            <ul class="alternatives-list">
+                <li>Community focus</li>
+                <li>Alternative content moderation</li>
+                <li>Potential feature differences</li>
+            </ul>
+        </section>
+
+        <section class="app-section">
+            <div class="app-title-container">
+                <img src="icons/whatsapp.png" alt="WhatsApp Icon" class="app-icon">
+                <h2 class="app-title">WhatsApp Alternative</h2>
+            </div>
+
+            <div class="sub-section">
+                <h3 class="sub-title">Signal:</h3>
+                <p class="app-description">
+                    <strong>Signal</strong> is a secure alternative to <strong>WhatsApp</strong>, which is owned by
+                    <strong>Facebook</strong> (Meta). <strong>Facebook</strong> has been accused of <strong>censoring
+                    pro-Palestinian content</strong>, supporting <strong>Israeli military propaganda</strong>, and
+                    having ties to <strong>Zionist interests</strong>. By using <strong>Signal</strong>, you’re
+                    supporting a platform that values <strong>privacy</strong>, <strong>freedom</strong>, and <strong>justice</strong>,
+                    and not one that aids in spreading harmful agendas or supporting the <strong>genocide</strong> in
+                    Gaza.
+                    <br>
+                <p style="margin-left: 15px; margin-right: 15px">
+
+                    <a href="https://signal.org/" target="_blank" rel="noopener noreferrer" class="download-link">
+                        <span class="material-icons" style="font-size: 18px; margin-right: 8px;">open_in_new</span>
+                        Download
+                    </a>
+                </p>
+
+            </div>
+
+            <br>
+
+            <h3 class="alternatives-title">Key Features</h3>
+            <ul class="alternatives-list">
+                <li>No direct Zionist support.</li>
+                <li>Open-source</li>
+            </ul>
+        </section>
+
+        <section class="app-section">
+            <div class="app-title-container">
+                <img src="icons/google.png" alt="Google Icon" class="app-icon">
+                <h2 class="app-title">Google Alternative</h2>
+            </div>
+
+            <div class="sub-section">
+                <p class="app-description">
+                    <strong>Google</strong> supports harmful agendas by censoring pro-Palestinian content, promoting
+                    biased narratives, and using its advertising platform for propaganda. Its search engine and
+                    services, like YouTube, often downplay Palestinian suffering and contribute to the spread of
+                    misleading information.
+                    <br>
+                    <strong>But here are some alternatives who don’t support genocide.</strong>
+                </p>
+            </div>
+
+            <h3 class="alternatives-title">Alternatives:</h3>
+            <ul class="alternatives-list">
+                <li onclick="redirectTo('https://duckduckgo.com/')">DuckDuckGo</li>
+                <li onclick="redirectTo('https://www.startpage.com/')">StartPage</li>
+                <li onclick="redirectTo('https://search.brave.com/')">Brave Search</li>
+                <li onclick="redirectTo('https://www.ecosia.org/')">Ecosia</li>
+            </ul>
+
+            <br>
+            <p class="note" style="padding-left: 8px; padding-top: 8px; padding-bottom: 8px; padding-right: 8px;">These
+                engines use Google or Bing for search data, so always use an Adblocker.</p>
+
+        </section>
+
+        <section class="app-section">
+            <div class="app-title-container">
+                <img src="icons/chatgpt.png" alt="ChatGPT Icon" class="app-icon">
+                <h2 class="app-title">ChatGPT Alternative</h2>
+            </div>
+
+            <div class="sub-title">DeepSeek</div>
+
+            <p class="app-description">
+                OpenAI’s ChatGPT is biased towards Zionist narratives by default, but changes its stance when users
+                express pro-Palestinian views. So, for generating images without living things, use ChatGPT, and if you
+                run out of limits, create more Gmail accounts, as generating images requires a lot of GPU power.
+                Additionally, for a non-biased chatbot, use DeepSeek!
+
+                <br>
+                <br>
+                <a href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer" class="download-link">
+                    <span class="material-icons" style="font-size: 18px; margin-right: 8px;">open_in_new</span>
+                    DeepSeek Website
+                </a>
+            </p>
+            <h3 class="alternatives-title">Features</h3>
+            <ul class="alternatives-list">
+                <li>AI Chat</li>
+                <li>Truthful</li>
+                <li>Code generation</li>
+            </ul>
+        </section>
+
+        <section class="app-section">
+            <div class="app-title-container">
+                <img src="icons/windows.png" alt="Windows Icon" class="app-icon">
+                <h2 class="app-title">Windows Alternative</h2>
+            </div>
+            <div class="sub-title">Crack/Linux</div>
+            <p class="app-description">
+                Microsoft is helping Zionists with AI tech, contributing to harmful agendas. Stop buying Windows and
+                crack it instead using KMSpico! Additionally, try adapting to Linux Ubuntu for a more secure and
+                independent experience.
+            </p>
+            <h3 class="alternatives-title">Alternatives:</h3>
+            <ul class="alternatives-list">
+                <li>Linux (Ubuntu, Fedora, etc.)</li>
+                <li>Kmspico (Crack windows)</li>
+            </ul>
+        </section>
+
+        <section class="app-section">
+            <div class="app-title-container">
+                <img src="icons/chrome.png" alt="Chrome Icon" class="app-icon">
+                <h2 class="app-title">Chrome Alternative</h2>
+            </div>
+
+            <p class="app-description">
+
+                Google Chrome is another tool that indirectly supports Zionist agendas through its data collection and
+                partnerships. Stop using Chrome and switch to a more privacy-focused browser like Firefox, Brave, or the
+                Kahf browser to protect your data and resist oppression.
+
+                <br>
+                <br>
+                <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="noopener noreferrer"
+                   class="download-link">
+                    <span class="material-icons" style="font-size: 18px; margin-right: 8px;">open_in_new</span>
+                    Firefox
+                </a>
+
+                <a href="https://brave.com/download/" target="_blank" rel="noopener noreferrer"
+                   class="download-link">
+                    <span class="material-icons" style="font-size: 18px; margin-right: 8px;">open_in_new</span>
+                    Brave
+                </a>
+
+                <a href="https://kahfbrowser.com/" target="_blank" rel="noopener noreferrer"
+                   class="download-link">
+                    <span class="material-icons" style="font-size: 18px; margin-right: 8px;">open_in_new</span>
+                    Kahf Browser
+                </a>
+            </p>
+
+        </section>
+    </main>
+    <footer>
+        <p style="padding: 4px 4px 4px 4px;">It's really very tough to follow all of these steps shown here. However, if you are against genocide, at
+            least try one of them. It can make an impact, but our main boycott should be on Israeli products and
+            services such as Coca-Cola, McDonald's, Starbucks, HP, Intel, and other tech giants that support the
+            occupation. Boycotting these products is a powerful way to resist oppression and stand in solidarity with
+            Palestine.</p>
+    </footer>
+</div>
+<script>
+    document.querySelectorAll('.app-section').forEach((section, index) => {
+        section.style.animationDelay = `${index * 0.1}s`;
+    });
+
+    document.querySelectorAll('.download-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.target.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                e.target.style.transform = 'scale(1)';
+            }, 100);
+        });
+    });
+
+    function redirectTo(url) {
+        window.open(url, '_blank');
+    }
+
+</script>
+</body>
+</html>
